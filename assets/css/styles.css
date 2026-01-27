@@ -1,0 +1,188 @@
+:root{
+  --brand: #1d809f;           /* similar vibe */
+  --brand-dark: #155d74;
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1050;
+  border-radius: 999px;
+  width: 3.25rem;
+  height: 3.25rem;
+  display: grid;
+  place-items: center;
+}
+
+/* Sidebar */
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(320px, 85vw);
+  background: #1f1f1f;
+  transform: translateX(110%);
+  transition: transform 220ms ease;
+  z-index: 1100;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 0.75rem 2rem rgba(0,0,0,.35);
+}
+.sidebar.open{ transform: translateX(0); }
+
+.sidebar-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom: 1rem;
+}
+.sidebar-brand{
+  color: #fff;
+  text-decoration:none;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.sidebar-nav{
+  list-style:none;
+  padding:0;
+  margin: 1rem 0 0 0;
+}
+.sidebar-link{
+  display:block;
+  padding: .85rem .5rem;
+  color:#fff;
+  text-decoration:none;
+  border-radius: .5rem;
+}
+.sidebar-link:hover{
+  background: rgba(255,255,255,.08);
+}
+
+/* Hero */
+.masthead{
+  position: relative;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=2000&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.masthead .overlay{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+.masthead h1{
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 800;
+}
+.btn-xl{
+  padding: 1.05rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* Sections */
+.content-section{
+  padding: 6rem 0;
+}
+.content-section-heading h3{
+  text-transform: uppercase;
+  font-size: .95rem;
+  letter-spacing: .12em;
+}
+.text-secondary{ color: #ecb807 !important; } /* accent similar look */
+
+/* Services */
+.bg-primary{ background-color: var(--brand) !important; }
+.service-icon{
+  background: #fff;
+  color: var(--brand);
+  height: 7rem;
+  width: 7rem;
+  display:grid;
+  place-items:center;
+  font-size: 2.25rem;
+  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,.15);
+}
+.text-faded{ color: rgba(255,255,255,.85); }
+
+/* Callout */
+.callout{
+  padding: 10rem 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/* Portfolio */
+.portfolio-item{
+  position: relative;
+  display:block;
+  overflow:hidden;
+  text-decoration:none;
+}
+.portfolio-img{
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 220ms ease;
+}
+.portfolio-item:hover .portfolio-img{ transform: scale(1.05); }
+
+.caption{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.55);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  display:flex;
+  align-items:center;
+}
+.portfolio-item:hover .caption{ opacity: 1; }
+
+.caption-content{
+  padding: 2rem;
+  color:#fff;
+}
+.caption-content .h2{
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+/* Placeholder portfolio images */
+.portfolio-img-1{ background-image:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"); }
+.portfolio-img-2{ background-image:url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"); }
+.portfolio-img-3{ background-image:url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80"); }
+.portfolio-img-4{ background-image:url("https://images.unsplash.com/photo-1529336953121-a0c7f8b3854b?auto=format&fit=crop&w=1600&q=80"); }
+
+/* Footer */
+.footer{
+  padding: 5rem 0;
+}
+.social-link{
+  height: 3.25rem;
+  width: 3.25rem;
+  background: var(--brand);
+  display: inline-grid;
+  place-items: center;
+  text-decoration:none;
+  box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,.15);
+}
+.social-link:hover{
+  background: var(--brand-dark);
+}
+
+/* Small responsiveness tweaks */
+@media (max-width: 575.98px){
+  .portfolio-img{ height: 280px; }
+}
+
