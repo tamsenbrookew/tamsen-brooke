@@ -560,3 +560,95 @@ fieldset {
   text-align: center;
   white-space: nowrap;
 }
+
+/* Top Bar */
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1200;
+  background: rgba(15, 15, 15, .65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.topbar-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: .75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-logo{
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  gap: .6rem;
+}
+
+.topbar-logo-img{
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.topbar-logo-text{
+  font-weight: 800;
+  letter-spacing: .06em;
+  font-size: 1.1rem;
+}
+
+/* Menu button */
+.topbar-menu-btn{
+  appearance: none;
+  border: 0;
+  background: transparent;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.topbar-menu-btn:hover{
+  background: rgba(255,255,255,.08);
+}
+
+/* Hamburger icon (pure CSS) */
+.hamburger{
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  border-radius: 2px;
+}
+
+.hamburger::before,
+.hamburger::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.hamburger::before{ top: -7px; }
+.hamburger::after{ top: 7px; }
+
+/* Ensure content isn't hidden behind the fixed topbar */
+body{
+  padding-top: 72px;
+}
+
+/* If your hero should start at the very top, you can remove the padding on the homepage only by adding a class:
+   <body class="home"> ... and then use:
+   body.home{ padding-top: 0; }
+*/
