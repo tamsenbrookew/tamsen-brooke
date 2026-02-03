@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background: #f4f2ee;
+}
+
+/* TOP NAV */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #111;
+  padding: 1.25rem 2rem;
+  background: #f4f2ee;
+}
+
+.nav-name {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* SPLIT LAYOUT */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: calc(100vh - 72px);
+  border-left: 2px solid #111;
+  border-right: 2px solid #111;
+}
+
+/* PANELS */
+.panel {
+  position: relative;
+  border-right: 2px solid #111;
+  overflow: hidden;
+}
+
+.panel:last-child {
+  border-right: none;
+}
+
+/* IMAGE PANELS */
+.panel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CENTER TEXT PANEL */
+.panel-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f2ee;
+  text-align: left;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.intro-link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #222;
+  letter-spacing: 0.05em;
+}
+
+.intro-link:hover {
+  text-decoration: underline;
+}
+
+/* PANEL LABEL */
+.panel-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: rgba(0,0,0,0.45);
+  padding: 0.4rem 0.6rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .panel {
+    height: 80vh;
+    border-right: none;
+    border-bottom: 2px solid #111;
+  }
+
+  .panel:last-child {
+    border-bottom: none;
+  }
+
+  .panel-text {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+}
