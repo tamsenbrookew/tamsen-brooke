@@ -276,6 +276,72 @@ a:hover{ color: var(--accent); }
   background: rgba(14,165,168,0.08);
   color: var(--accent-dark);
 }
+/* ---------- Alternating portfolio layout ---------- */
+
+.portfolio-stack{
+  display: grid;
+  gap: 18px;
+}
+
+.project-row{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* image a bit larger than text */
+  gap: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.project-row.reverse{
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.project-row .project-media{
+  height: 420px;              /* taller, more editorial */
+  border-bottom: 0;           /* no bottom border in split layout */
+  border-right: 1px solid var(--line);
+}
+
+.project-row.reverse .project-media{
+  order: 2;
+  border-right: 0;
+  border-left: 1px solid var(--line);
+}
+
+.project-row .project-body{
+  padding: 26px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-row h3{
+  margin: 0 0 10px;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+
+.project-row p{
+  margin: 0;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+/* Responsive: stack image over text on mobile */
+@media (max-width: 860px){
+  .project-row,
+  .project-row.reverse{
+    grid-template-columns: 1fr;
+  }
+
+  .project-row .project-media,
+  .project-row.reverse .project-media{
+    order: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+    height: 260px;
+  }
+}
 
 /* ---------- Resume ---------- */
 
