@@ -1,101 +1,125 @@
-<!-- Sidebar Toggle Button -->
-<button class="btn btn-primary sidebar-toggle shadow" type="button" aria-label="Open menu" id="sidebarToggle">
-  <i class="bi bi-list"></i>
-</button>
-
-<!-- Sidebar -->
-<nav class="sidebar" id="sidebar" aria-label="Site menu">
-  <div class="sidebar-header">
-    <a class="sidebar-brand" href="index.html">Menu</a>
-    <button class="btn btn-link text-white" type="button" aria-label="Close menu" id="sidebarClose">
-      <i class="bi bi-x-lg"></i>
-    </button>
-  </div>
-  <ul class="sidebar-nav">
-    <li><a href="index.html" class="sidebar-link">Home</a></li>
-    <li><a href="about.html" class="sidebar-link">About</a></li>
-    <li><a href="resume.html" class="sidebar-link">Resume</a></li>
-    <li><a href="portfolio.html" class="sidebar-link">Portfolio</a></li>
-    <li><a href="#contact" class="sidebar-link">Contact</a></li>
-  </ul>
-</nav>
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Portfolio | Tamsen Brooke</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamsen Brooke Warner | Resume</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
 <body>
 
-<!-- Topbar -->
-<header class="topbar">
-  <div class="topbar-inner">
-    <a class="topbar-logo" href="index.html">
-      <img src="assets/img/TBW_keys.png" class="topbar-logo-img" alt="TBW logo">
-    </a>
-    <button class="topbar-menu-btn" id="sidebarToggle">
-      <span class="hamburger"></span>
-    </button>
-  </div>
-</header>
-
-<!-- Sidebar -->
-<nav class="sidebar" id="sidebar">
-  <button id="sidebarClose" aria-label="Close menu">✕</button>
-  <a href="about.html" class="sidebar-link">About</a>
-  <a href="resume.html" class="sidebar-link">Resume</a>
-  <a href="portfolio.html" class="sidebar-link">Portfolio</a>
-  <a href="contact.html" class="sidebar-link">Contact</a>
-</nav>
-
-<main class="container page-spacing">
-
-  <h1>Portfolio</h1>
-
-  <!-- Project 1 -->
-  <section class="project-row">
-    <div class="project-media">
-      <img src="assets/img/project-1.jpg" alt="Project one image">
-      <!-- OR video
-      <video controls src="assets/video/project-1.mp4"></video>
-      -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">Tamsen<span class="dot">.</span>Warner</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a class="active" href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <div class="project-text">
-      <h2>Project Title One</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </header>
+
+  <main class="container section">
+    <h1 class="page-title">Resume</h1>
+    <p class="page-subtitle">
+      A clean, web-friendly resume summary. If you want, you can also add a downloadable PDF later.
+    </p>
+
+    <div class="grid two">
+      <div class="card resume-block">
+        <h2>Experience</h2>
+
+        <div class="item">
+          <div class="item-title">
+            <strong>Role Title — Company</strong>
+            <span>2023 – Present</span>
+          </div>
+          <p>1–2 lines about impact, responsibilities, and outcomes.</p>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <strong>Role Title — Company</strong>
+            <span>2021 – 2023</span>
+          </div>
+          <p>1–2 lines about impact, responsibilities, and outcomes.</p>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <strong>Role Title — Company</strong>
+            <span>2019 – 2021</span>
+          </div>
+          <p>1–2 lines about impact, responsibilities, and outcomes.</p>
+        </div>
+      </div>
+
+      <div class="card resume-block">
+        <h2>Skills</h2>
+        <div class="tag-row">
+          <span class="tag">Skill A</span>
+          <span class="tag">Skill B</span>
+          <span class="tag">Skill C</span>
+          <span class="tag">Skill D</span>
+          <span class="tag">Skill E</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Education</h2>
+        <div class="item">
+          <div class="item-title">
+            <strong>Degree — School</strong>
+            <span>Year</span>
+          </div>
+          <p>Optional: honors, focus, relevant coursework.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Highlights</h2>
+        <div class="item">
+          <div class="item-title">
+            <strong>Award / Certification</strong>
+            <span>Year</span>
+          </div>
+          <p>Optional: what it is / why it matters.</p>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <!-- Project 2 -->
-  <section class="project-row reverse">
-    <div class="project-media">
-      <img src="assets/img/project-2.jpg" alt="Project two image">
+    <div style="height:18px;"></div>
+
+    <div class="card">
+      <h2 style="margin-top:0;">Contact</h2>
+      <p class="note">
+        Add your email/phone/LinkedIn here, or keep it minimal and direct people to the contact form.
+      </p>
     </div>
-    <div class="project-text">
-      <h2>Project Title Two</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="small">© <span id="year"></span> Tamsen Brooke Warner</div>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer class="site-footer">
-  <img src="assets/img/TBW_keys.png" alt="TBW logo" class="footer-logo">
-  <p class="footer-name">Tamsen Brooke</p>
-  <p class="footer-copy">© 2026 Tamsen Brooke</p>
-
-  <nav class="footer-nav">
-    <a href="about.html">About</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</footer>
-
-<script src="assets/js/scripts.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
 
