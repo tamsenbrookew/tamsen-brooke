@@ -1,71 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Contact | Tamsen Brooke</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamsen Brooke Warner | Contact</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="topbar-inner">
-    <a href="index.html" class="topbar-logo">
-      <img src="assets/img/TBW_keys.png" class="topbar-logo-img" alt="TBW logo">
-    </a>
-    <button id="sidebarToggle" class="topbar-menu-btn">
-      <span class="hamburger"></span>
-    </button>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">Tamsen<span class="dot">.</span>Warner</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<nav class="sidebar" id="sidebar">
-  <button id="sidebarClose">✕</button>
-  <a href="about.html" class="sidebar-link">About</a>
-  <a href="resume.html" class="sidebar-link">Resume</a>
-  <a href="portfolio.html" class="sidebar-link">Portfolio</a>
-  <a href="contact.html" class="sidebar-link">Contact</a>
-</nav>
+  <main class="container section">
+    <h1 class="page-title">Contact</h1>
+    <p class="page-subtitle">
+      Send a message using the form below.
+    </p>
 
-<main class="container page-spacing narrow">
+    <div class="grid two">
+      <div class="card">
+        <h2 style="margin-top:0;">Message me</h2>
 
-  <h1>Connect</h1>
-  <p>Feel free to reach out using the form below.</p>
+        <!-- Formspree: replace YOUR_FORM_ID -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
 
-  <form action="https://formspree.io/f/YOUR_ID" method="POST" class="contact-form">
-    <label>
-      Name
-      <input type="text" name="name" required>
-    </label>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
 
-    <label>
-      Email
-      <input type="email" name="email" required>
-    </label>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
 
-    <label>
-      Message
-      <textarea name="message" rows="5" required></textarea>
-    </label>
+          <button class="btn submit" type="submit">Send Message</button>
+        </form>
 
-    <button type="submit">Send Message</button>
-  </form>
+        <p class="note" style="margin-top:10px;">
+          To make this form work on GitHub Pages, create a free Formspree form and replace <strong>YOUR_FORM_ID</strong>.
+        </p>
+      </div>
 
-</main>
+      <div class="card">
+        <h2 style="margin-top:0;">Other ways to reach me</h2>
+        <p class="note">Add your preferred contact info:</p>
+        <div class="divider"></div>
 
-<footer class="site-footer">
-  <img src="assets/img/TBW_keys.png" class="footer-logo" alt="TBW logo">
-  <p class="footer-name">Tamsen Brooke</p>
-  <p class="footer-copy">© 2026 Tamsen Brooke</p>
+        <p><strong>Email:</strong> you@example.com</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/your-handle</p>
+        <p><strong>GitHub:</strong> github.com/your-handle</p>
 
-  <nav class="footer-nav">
-    <a href="about.html">About</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</footer>
+        <div class="divider"></div>
+        <p class="note">
+          Keep it minimal if you prefer — the form is often enough.
+        </p>
+      </div>
+    </div>
+  </main>
 
-<script src="assets/js/scripts.js"></script>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="small">© <span id="year"></span> Tamsen Brooke Warner</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
