@@ -180,6 +180,40 @@
 .social-link:hover{
   background: var(--brand-dark);
 }
+  .site-footer{
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,.12);
+}
+
+.footer-logo{
+  height: 42px;
+  margin-bottom: 1rem;
+}
+
+.footer-name{
+  font-weight: 500;
+}
+
+.footer-copy{
+  font-size: .85rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav{
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-nav a{
+  text-decoration: none;
+  font-size: .9rem;
+  color: #111;
+}
+
 
 /* Small responsiveness tweaks */
 @media (max-width: 575.98px){
