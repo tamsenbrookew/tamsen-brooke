@@ -29,58 +29,40 @@
   <main class="container section">
     <h1 class="page-title">Portfolio</h1>
     <p class="page-subtitle">
-      Two featured projects. Replace the titles, descriptions, tags, links, and images with your real work.
+      
     </p>
 
-    <div class="grid two">
+   <div class="portfolio-stack">
 
-      <!-- Project 1 -->
-      <article class="card project">
-        <div class="project-media">
-          <!-- Add your image at assets/img/project1.jpg -->
-          <img src="assets/img/project1.jpg" alt="Project 1 preview image">
-        </div>
-        <div class="project-body">
-          <h3>Project One — Case Study Title</h3>
-          <div class="tag-row">
-            <span class="tag">Teal Accent</span>
-            <span class="tag">Research</span>
-            <span class="tag">Design</span>
-          </div>
-          <p>
-            A short description of the problem, your approach, and the outcome. Keep it tight and outcome-focused.
-          </p>
-          <div class="project-links">
-            <a class="link-btn" href="#" aria-label="View project one">View</a>
-            <a class="link-btn" href="#" aria-label="Project one source or details">Details</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 2 -->
-      <article class="card project">
-        <div class="project-media">
-          <!-- Add your image at assets/img/project2.jpg -->
-          <img src="assets/img/project2.jpg" alt="Project 2 preview image">
-        </div>
-        <div class="project-body">
-          <h3>Project Two — Case Study Title</h3>
-          <div class="tag-row">
-            <span class="tag">Writing</span>
-            <span class="tag">Strategy</span>
-            <span class="tag">Execution</span>
-          </div>
-          <p>
-            A short description of what you built or delivered. Mention scope, tools, and measurable results if possible.
-          </p>
-          <div class="project-links">
-            <a class="link-btn" href="#" aria-label="View project two">View</a>
-            <a class="link-btn" href="#" aria-label="Project two source or details">Details</a>
-          </div>
-        </div>
-      </article>
-
+  <!-- Project 1 (image left, text right) -->
+  <article class="card project project-row">
+    <div class="project-media">
+      <img src="assets/img/project1.jpg" alt="Project 1 preview image">
     </div>
+    <div class="project-body">
+      <h3>Project One — Case Study Title</h3>
+      <p>
+        A short, outcome-focused description. Explain what the project was, your role, and the result.
+        Keep it clean and readable—no extra sections.
+      </p>
+    </div>
+  </article>
+
+  <!-- Project 2 (text left, image right) -->
+  <article class="card project project-row reverse">
+    <div class="project-media">
+      <img src="assets/img/project2.jpg" alt="Project 2 preview image">
+    </div>
+    <div class="project-body">
+      <h3>Project Two — Case Study Title</h3>
+      <p>
+        Another short description. Mention scope, your contribution, and what changed or improved because of the work.
+      </p>
+    </div>
+  </article>
+
+</div>
+
 
     <div style="height:18px;"></div>
 
