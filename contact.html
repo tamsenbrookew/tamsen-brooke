@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact | Tamsen Brooke</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="topbar-logo">
+      <img src="assets/img/TBW_keys.png" class="topbar-logo-img" alt="TBW logo">
+    </a>
+    <button id="sidebarToggle" class="topbar-menu-btn">
+      <span class="hamburger"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="sidebar" id="sidebar">
+  <button id="sidebarClose">✕</button>
+  <a href="about.html" class="sidebar-link">About</a>
+  <a href="resume.html" class="sidebar-link">Resume</a>
+  <a href="portfolio.html" class="sidebar-link">Portfolio</a>
+  <a href="contact.html" class="sidebar-link">Contact</a>
+</nav>
+
+<main class="container page-spacing narrow">
+
+  <h1>Connect</h1>
+  <p>Feel free to reach out using the form below.</p>
+
+  <form action="https://formspree.io/f/YOUR_ID" method="POST" class="contact-form">
+    <label>
+      Name
+      <input type="text" name="name" required>
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Message
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+</main>
+
+<footer class="site-footer">
+  <img src="assets/img/TBW_keys.png" class="footer-logo" alt="TBW logo">
+  <p class="footer-name">Tamsen Brooke</p>
+  <p class="footer-copy">© 2026 Tamsen Brooke</p>
+
+  <nav class="footer-nav">
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</footer>
+
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
