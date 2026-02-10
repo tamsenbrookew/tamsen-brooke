@@ -1,18 +1,24 @@
 (() => {
   const sidebar = document.getElementById("sidebar");
-  const openBtn = document.getElementById("sidebarToggle");
+  const toggle = document.getElementById("sidebarToggle");
   const closeBtn = document.getElementById("sidebarClose");
 
-  const open = () => sidebar.classList.add("open");
-  const close = () => sidebar.classList.remove("open");
+  const toggleSidebar = () => {
+    sidebar.classList.toggle("open");
+  };
 
-  openBtn?.addEventListener("click", open);
-  closeBtn?.addEventListener("click", close);
+  toggle?.addEventListener("click", toggleSidebar);
+  closeBtn?.addEventListener("click", toggleSidebar);
 
-  // Close sidebar on link click
   document.querySelectorAll(".sidebar-link").forEach(link => {
-    link.addEventListener("click", close);
+    link.addEventListener("click", () => sidebar.classList.remove("open"));
   });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") sidebar.classList.remove("open");
+  });
+})();
+
 
   // Escape closes
   document.addEventListener("keydown", (e) => {
