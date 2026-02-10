@@ -12,5 +12,282 @@
   --bg-page: #f5f5f5;
   --bg-white: #ffffff;
 
-  --border
+  --border-light: #e5e7eb;
 
+  --font-body: "Open Sans", sans-serif;
+  --font-display: "Nunito Sans", sans-serif;
+}
+
+
+/* =========================================================
+   BASE / GLOBAL
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--brand-dark);
+}
+
+
+/* =========================================================
+   TOP HEADER / NAV BAR
+   ========================================================= */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border-light);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 1.25rem;
+  z-index: 1000;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+
+/* Hamburger */
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(5px);
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100vh;
+
+  background: var(--bg-white);
+  border-right: 1px solid var(--border-light);
+
+  padding: 1.5rem;
+  transition: left 0.3s ease;
+  z-index: 1100;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--text-main);
+}
+
+.sidebar-link:hover {
+  color: var(--brand);
+}
+
+
+/* =========================================================
+   PAGE WRAPPER
+   ========================================================= */
+
+.page-wrapper {
+  padding-top: 96px; /* space for fixed header */
+}
+
+
+/* =========================================================
+   HERO / GALLERY IMAGE (CENTERED, FRAMED)
+   ========================================================= */
+
+.hero-frame {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+}
+
+.hero-frame img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   CONTENT SECTIONS
+   ========================================================= */
+
+.content-section {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-faded {
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-light);
+
+  margin-top: 4rem;
+  padding: 2rem 1.5rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 140px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-nav a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.footer-nav a:hover {
+  color: var(--brand);
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   FORMS (Formspree – Scoped)
+   ========================================================= */
+
+.fs-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.fs-input,
+.fs-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-light);
+  font-family: var(--font-body);
+}
+
+.fs-button {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.fs-button:hover {
+  background: var(--brand-dark);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .hero-frame {
+    margin: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .footer-inner {
+    text-align: center;
+  }
+}
