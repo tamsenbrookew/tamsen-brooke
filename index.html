@@ -75,16 +75,41 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-links">
-        <a href="portfolio.html">Portfolio</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="small">© <span id="year"></span> Tamsen Brooke Warner</div>
+ <footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-brand">
+      <a href="index.html" aria-label="Home">
+        <img class="footer-logo" src="assets/img/TBW_keys.png" alt="TBW logo">
+      </a>
     </div>
-  </footer>
+
+    <div class="social-row" aria-label="Social links">
+      <a class="social-link" href="https://www.instagram.com/tamsenbrookewarner" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5A3.95 3.95 0 0 0 7.75 20.2h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm4.25 4.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm0 1.8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.55-2.05a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"/>
+        </svg>
+        Instagram
+      </a>
+
+      <a class="social-link" href="https://www.linkedin.com/in/tamsen-brooke-warner" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4.98 3.5A2.48 2.48 0 1 1 5 8.46 2.48 2.48 0 0 1 4.98 3.5ZM3.5 9h3v11.5h-3V9Zm7 0h2.88v1.57h.04c.4-.76 1.38-1.57 2.84-1.57 3.04 0 3.6 2 3.6 4.6v6.9h-3v-6.12c0-1.46-.03-3.34-2.03-3.34-2.03 0-2.34 1.59-2.34 3.23v6.23h-3V9Z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="small">© <span id="year"></span> Tamsen Brooke Warner</div>
+  </div>
+</footer>
+
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
