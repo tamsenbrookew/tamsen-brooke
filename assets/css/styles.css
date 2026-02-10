@@ -362,6 +362,60 @@ textarea{ min-height: 140px; resize: vertical; }
   opacity: 0.9;
 }
 
+/* ---------- Footer brand + socials ---------- */
+
+.footer-brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.footer-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
+}
+
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 10px 0 14px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  color: #2b3445;
+  transition: 180ms ease;
+}
+
+.social-link:hover {
+  border-color: rgba(14,165,168,0.65);
+  background: rgba(14,165,168,0.08);
+  color: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: currentColor;
+}
+
+
+
+
 /* ---------- Utilities ---------- */
 
 .divider{
