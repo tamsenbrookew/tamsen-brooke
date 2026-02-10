@@ -96,7 +96,7 @@ a:hover{ color: var(--accent); }
 }
 
 .hero-inner{
-  min-height: 520px;
+  min-height: 680px; /* was 520px */
   display:flex;
   align-items:center;
   justify-content:center;
@@ -104,13 +104,14 @@ a:hover{ color: var(--accent); }
   padding: 56px 20px;
   position: relative;
 
-  /* Replace hero.jpg with your own image in /assets/img/ */
   background:
     linear-gradient(var(--overlay), var(--overlay)),
     url("../img/hero.jpg");
+
   background-size: cover;
-  background-position: center;
+  background-position: center top; /* shifts image up slightly */
 }
+
 
 .hero-content{
   max-width: 760px;
