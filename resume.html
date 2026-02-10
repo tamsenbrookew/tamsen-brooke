@@ -1,28 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamsen Brooke Warner | Resume</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
 
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">Tamsen<span class="dot">.</span>Warner</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a class="active" href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container section">
+    <h1 class="page-title">Resume</h1>
+    <p class="page-subtitle">
+      A clean, web-friendly resume summary. If you want, you can also add a downloadable PDF later.
+    </p>
 
+    <div class="grid two">
+      <div class="card resume-block">
+        <h2>Experience</h2>
 
-<!-- Sidebar Toggle Button -->
-<button class="btn btn-primary sidebar-toggle shadow" type="button" aria-label="Open menu" id="sidebarToggle">
-  <i class="bi bi-list"></i>
-</button>
+        <div class="item">
+          <div class="item-title">
+            <strong>Role Title — Company</strong>
+            <span>2023 – Present</span>
+          </div>
+          <p>1–2 lines about impact, responsibilities, and outcomes.</p>
+        </div>
 
-<!-- Sidebar -->
-<nav class="sidebar" id="sidebar" aria-label="Site menu">
-  <div class="sidebar-header">
-    <a class="sidebar-brand" href="index.html">Menu</a>
-    <button class="btn btn-link text-white" type="button" aria-label="Close menu" id="sidebarClose">
-      <i class="bi bi-x-lg"></i>
-    </button>
-  </div>
-  <ul class="sidebar-nav">
-    <li><a href="index.html" class="sidebar-link">Home</a></li>
-    <li><a href="about.html" class="sidebar-link">About</a></li>
-    <li><a href="resume.html" class="sidebar-link">Resume</a></li>
-    <li><a href="portfolio.html" class="sidebar-link">Portfolio</a></li>
-    <li><a href="#contact" class="sidebar-link">Contact</a></li>
-  </ul>
-</nav>
+        <div class="item">
+          <div class="item-title">
+            <strong>Role Title — Company</strong>
+            <span>2021 – 2023</span>
+          </div>
+          <p>1–2 lines about impact, responsibilities, and outcomes.</p>
+        </div>
 
+        <div class="item">
+          <div class="item-title">
+            <strong>Role Title — Company</strong>
+            <span>2019 – 2021</span>
+          </div>
+          <p>1–2 lines about impact, responsibilities, and outcomes.</p>
+        </div>
+      </div>
+
+      <div class="card resume-block">
+        <h2>Skills</h2>
+        <div class="tag-row">
+          <span class="tag">Skill A</span>
+          <span class="tag">Skill B</span>
+          <span class="tag">Skill C</span>
+          <span class="tag">Skill D</span>
+          <span class="tag">Skill E</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Education</h2>
+        <div class="item">
+          <div class="item-title">
+            <strong>Degree — School</strong>
+            <span>Year</span>
+          </div>
+          <p>Optional: honors, focus, relevant coursework.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Highlights</h2>
+        <div class="item">
+          <div class="item-title">
+            <strong>Award / Certification</strong>
+            <span>Year</span>
+          </div>
+          <p>Optional: what it is / why it matters.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:18px;"></div>
+
+    <div class="card">
+      <h2 style="margin-top:0;">Contact</h2>
+      <p class="note">
+        Add your email/phone/LinkedIn here, or keep it minimal and direct people to the contact form.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="small">© <span id="year"></span> Tamsen Brooke Warner</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
