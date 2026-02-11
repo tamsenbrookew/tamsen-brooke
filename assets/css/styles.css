@@ -326,6 +326,41 @@ a:hover{ color: var(--accent); }
   max-width: 60ch;
 }
 
+/* ---------- Portfolio galleries (no JS) ---------- */
+
+.project-gallery {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-gallery::-webkit-scrollbar {
+  height: 10px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb {
+  background: rgba(14,165,168,0.35);
+  border-radius: 999px;
+}
+
+.project-gallery-item {
+  flex: 0 0 100%;              /* each slide takes full width */
+  height: 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.project-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* consistent crop like your current images */
+  display: block;
+}
+
+
 /* Responsive: stack image over text on mobile */
 @media (max-width: 860px){
   .project-row,
@@ -413,20 +448,35 @@ textarea{ min-height: 140px; resize: vertical; }
 }
 
 .resume-download a {
-  font-size: 13px;
-  letter-spacing: 0.18em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 24px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--text);
-  padding: 10px 12px;
-  border-radius: 999px;
+
+  background: var(--accent);
+  color: #ffffff;
+
+  border: 1px solid var(--accent);
+  box-shadow: 0 8px 20px rgba(14,165,168,0.25);
+
   transition: 180ms ease;
 }
 
+
 .resume-download a:hover {
-  color: var(--accent-dark);
-  background: rgba(14,165,168,0.10);
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(14,165,168,0.35);
 }
+
 
 .resume-stage {
   padding: 8px 0 44px;
