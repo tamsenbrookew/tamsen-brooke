@@ -433,11 +433,10 @@ textarea{ min-height: 140px; resize: vertical; }
 }
 
 .resume-paper {
-  background: #f3f1e7; /* warm paper-like tone (like screenshot) */
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: 0 18px 50px rgba(18,24,38,0.10);
-  padding: 26px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
